@@ -13582,6 +13582,16 @@ bitcoin.networks.bitcoin = {
     feePerKb: 0,
     estimateFee: estimateFee('rubycoin')
   };
+  bitcoin.networks.safecoin = {
+    messagePrefix: '\x18Safecoin Signed Message:\n',
+    bip32: {
+      public: 0x0488B21E,
+      private: 0x0488ADE4
+    },
+    pubKeyHash: 0x3d,
+    scriptHash: 0x56,
+    wif: 0xbd
+  };
   bitcoin.networks.smileycoin = {
     magicPrefix: '\x19Smileycoin Signed Message:\n',
     bip32: {
@@ -17773,6 +17783,13 @@ d+"px").css("background-color",a.isDark(e,i)?h.foreground:h.background).appendTo
             onSelect: function() {
                 network = bitcoin.networks.bitcoinprivate;
                 DOM.bip44coin.val(183);
+            },
+        },
+        {
+          name: "Safecoin",
+          onSelect: function() {
+              network = bitcoinjs.bitcoin.networks.safecoin;
+              DOM.bip44coin.val(19165);
             },
         },
     ]

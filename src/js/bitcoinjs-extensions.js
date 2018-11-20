@@ -666,6 +666,17 @@ bitcoin.networks.bitcoin = {
     estimateFee: estimateFee('vpncoin')
   };
 
+  bitcoin.networks.safecoin = {
+  messagePrefix: '\x18Safecoin Signed Message:\n',
+  bip32: {
+    public: 0x0488B21E,
+    private: 0x0488ADE4
+  },
+  pubKeyHash: 0x3d,
+  scriptHash: 0x56,
+  wif: 0xbd
+  };
+
 bitcoin.networks.pivx = {
       magicPrefix: '\x19PIVX Signed Message:\n',
   bip32: {

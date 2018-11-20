@@ -1301,6 +1301,13 @@
                 DOM.bip44coin.val(183);
             },
         },
+        {
+          name: "Safecoin",
+          onSelect: function() {
+              network = bitcoin.networks.safecoin;
+              DOM.bip44coin.val(19165);
+            },
+        },
     ]
 
     init();
